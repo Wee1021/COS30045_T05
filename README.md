@@ -1,8 +1,8 @@
-# COS30045 Tutorial 1(a)
+# COS30045 Tutorial 5
 
 ## Appliance Energy Consumption Website
 
-This project was created for COS30045 Data Visualisation Tutorial 1(a).
+This project was created for COS30045 Data Visualisation Tutorial 5.
 
 ## Technologies
 - HTML

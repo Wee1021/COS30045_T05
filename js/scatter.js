@@ -1,11 +1,11 @@
 d3.csv("data/Ex5_TV_energy.csv", d => ({
-    brand: d.brand,
-    screenTech: d.screen_tech,
-    screenSize: +d.screensize,
-    energyConsumption: +d.energy_consumpt,
-    starRating: +d.star2,
-    count: +d.count
-  })).then(data => {
+        brand: d.brand,
+        screenTech: d.screen_tech,
+        screenSize: +d.screensize,
+        energyConsumption: +d.energy_consumpt,
+        starRating: +d.star2,
+        count: +d.count
+    })).then(data => {
   
     console.log("TV energy data:", data);
   
@@ -31,7 +31,7 @@ d3.csv("data/Ex5_TV_energy.csv", d => ({
       .attr("transform", `translate(${margin.left}, ${margin.top})`);
   
     const xScale = d3.scaleLinear()
-      .domain([0, d3.max(data, d => d.screenSize)])
+      .domain([0, d3.max(data, d => d.starRating)])
       .nice()
       .range([0, innerWidth]);
   
@@ -61,7 +61,7 @@ d3.csv("data/Ex5_TV_energy.csv", d => ({
       .selectAll("circle")
       .data(data)
       .join("circle")
-      .attr("cx", d => xScale(d.screenSize))
+      .attr("cx", d => xScale(d.starRating))
       .attr("cy", d => yScale(d.energyConsumption))
       .attr("r", 4)
       .attr("fill", d => colorScale(d.screenTech))
@@ -72,7 +72,7 @@ d3.csv("data/Ex5_TV_energy.csv", d => ({
       .attr("x", margin.left + innerWidth / 2)
       .attr("y", height - 15)
       .attr("text-anchor", "middle")
-      .text("Screen Size (inches)");
+      .text("Star Rating");
   
     svg
       .append("text")

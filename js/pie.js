@@ -36,7 +36,7 @@ d3.csv(
     const annotatedData = pieGenerator(data);
   
     const arcGenerator = d3.arc()
-      .innerRadius(0)
+      .innerRadius(radius * 0.5)
       .outerRadius(radius);
   
     const arcs = innerChart
