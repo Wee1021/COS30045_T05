@@ -39,6 +39,10 @@ d3.csv(
       .domain([0, d3.max(data, d => d.energyConsumption)])
       .nice()
       .range([innerHeight, 0]);
+
+    const colorScale = d3.scaleOrdinal()
+      .domain(["LCD", "LED", "OLED"])
+      .range(["#5CCB9A", "#F5A623", "#A690E8"]);
   
     innerChart
       .append("g")
@@ -59,7 +63,7 @@ d3.csv(
       .attr("height", d =>
         innerHeight - yScale(d.energyConsumption)
       )
-      .attr("fill", "#7F0020");
+      .attr("fill", d => colorScale(d.screenTech));
   
     svg
       .append("text")

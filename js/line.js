@@ -58,7 +58,7 @@ d3.csv("data/Ex5_ARE_Spot_Prices.csv", d => ({
       .datum(data)
       .attr("d", lineGenerator)
       .attr("fill", "none")
-      .attr("stroke", "#7F0020")
+      .attr("stroke", "#F5A623")
       .attr("stroke-width", 3);
   
     innerChart
@@ -68,7 +68,7 @@ d3.csv("data/Ex5_ARE_Spot_Prices.csv", d => ({
       .attr("cx", d => xScale(d.year))
       .attr("cy", d => yScale(d.averagePrice))
       .attr("r", 4)
-      .attr("fill", "#7F0020");
+      .attr("fill", "#F5A623");
   
     svg
       .append("text")

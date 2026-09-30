@@ -26,8 +26,8 @@ d3.csv(
       );
   
     const colorScale = d3.scaleOrdinal()
-      .domain(data.map(d => d.screenTech))
-      .range(d3.schemeTableau10);
+      .domain(["LCD", "LED", "OLED"])
+      .range(["#5CCB9A", "#F5A623", "#A690E8"]);
   
     const pieGenerator = d3.pie()
       .value(d => d.energyConsumption)

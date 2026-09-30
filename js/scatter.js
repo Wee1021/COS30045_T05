@@ -41,8 +41,8 @@ d3.csv("data/Ex5_TV_energy.csv", d => ({
       .range([innerHeight, 0]);
   
     const colorScale = d3.scaleOrdinal()
-      .domain([...new Set(data.map(d => d.screenTech))])
-      .range(d3.schemeTableau10);
+      .domain(["LCD", "LCD (LED)", "OLED"])
+      .range(["#5CCB9A", "#F5A623", "#A690E8"]);
   
     const bottomAxis = d3.axisBottom(xScale);
   
@@ -66,7 +66,32 @@ d3.csv("data/Ex5_TV_energy.csv", d => ({
       .attr("r", 4)
       .attr("fill", d => colorScale(d.screenTech))
       .attr("opacity", 0.7);
-  
+    
+      const screenTypes = colorScale.domain();
+
+      const legend = svg
+        .append("g")
+        .attr("transform", `translate(${width - 150}, 30)`);
+      
+      screenTypes.forEach((screenType, index) => {
+      
+        const legendItem = legend
+          .append("g")
+          .attr("transform", `translate(0, ${index * 22})`);
+      
+        legendItem
+          .append("circle")
+          .attr("r", 5)
+          .attr("fill", colorScale(screenType));
+      
+        legendItem
+          .append("text")
+          .attr("x", 10)
+          .attr("y", 4)
+          .style("font-size", "12px")
+          .text(screenType);
+      });
+
     svg
       .append("text")
       .attr("x", margin.left + innerWidth / 2)
