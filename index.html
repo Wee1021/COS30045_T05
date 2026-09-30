@@ -29,24 +29,29 @@
   </header>
 
   <main class="main">
-    <!--<section class="page-hero">
-      <p class="page-eyebrow page-eyebrow-home">Welcome</p>
-      <h1>Appliance Energy Consumption</h1>
-      <p class="intro">
-        Household appliances contribute significantly to residential
-        electricity usage in Australia. This website explores the energy
-        consumption patterns of common household appliances in the
-        Australian market.
-      </p>
-    </section>-->
-
     <h1>Appliance Energy Consumption</h1>
-    <div id="content"></div>
-    <!-- Give the SVG a size so shapes can be seen -->
-    <svg width="300" height="150"></svg>
 
-    <!-- NEW: Container for T04-3 chart -->
-    <div class="responsive-svg-container"></div>
+    <section class="charts-grid">
+      <article class="chart-card">
+        <h2>TV Screen Size and Energy Consumption</h2>
+        <div id="scatter-chart" class="responsive-svg-container"></div>
+      </article>
+    
+      <article class="chart-card">
+        <h2>Australian Electricity Spot Prices</h2>
+        <div id="line-chart" class="responsive-svg-container"></div>
+      </article>
+    
+      <article class="chart-card">
+        <h2>Energy Consumption of 55-inch TVs by Screen Type</h2>
+        <div id="bar-chart" class="responsive-svg-container"></div>
+      </article>
+    
+      <article class="chart-card">
+        <h2>Mean Energy Consumption by Screen Type</h2>
+        <div id="pie-chart" class="responsive-svg-container"></div>
+      </article>
+    </section>
 
     <!-- Utility buttons -->
     <a href="#" class="scroll-btn"><img src="images/scroll.png" alt="Scroll To The Top"></a>
@@ -78,13 +83,6 @@
 
   <!-- D3 library -->
   <script src="https://d3js.org/d3.v7.min.js"></script>
-  <!-- NEW: T04-4 loader -->
-  <script src="t04-4-load.js"></script>
-  <!-- T04-4 loads CSV then calls createBarChart -->
-  <script src="t04-5-bars.js"></script>
-  <!-- T04-5 defines createBarChart -->
-  <!-- Old js files (disabled while doing T04-5) -->
-  <!-- <script src="energy-d3.js"></script> -->
-  <!-- <script src="t04-3-bars.js"></script> -->
+  <script src="js/scatter.js"></script>
 </body>
 </html>

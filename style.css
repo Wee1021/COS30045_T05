@@ -474,6 +474,41 @@ body {
 }
 
 /* ========================
+   SVG Container
+======================== */
+.responsive-svg-container {
+margin: 0 auto; /* center */
+width: 100%; /* fill parent width */
+max-width: 1200px; /* cap max width */
+}
+
+/* ========================
+   Charts Grid
+======================== */
+.charts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.chart-card {
+  background: var(--surface);
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+.chart-card h2 {
+  margin-top: 0;
+}
+
+.responsive-svg-container svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* ========================
    Responsive
 ======================== */
 @media (max-width: 900px) {
@@ -485,6 +520,10 @@ body {
   .story-card-reverse .story-copy,
   .story-card-reverse .story-visual {
     order: initial;
+  }
+
+  .charts-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -517,13 +556,4 @@ body {
   .footer-wrap {
     grid-template-columns: 1fr;
   }
-}
-
-/* ========================
-   SVG Container
-======================== */
-.responsive-svg-container {
-margin: 0 auto; /* center */
-width: 100%; /* fill parent width */
-max-width: 1200px; /* cap max width */
 }
