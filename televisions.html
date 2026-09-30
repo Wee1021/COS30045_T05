@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A data story exploring television choice and energy consumption in Australia for COS30045.">
+  <meta name="keywords" content="COS30045, Data Visualisation, Televisions, Energy Consumption, Australia">
+  <meta name="author" content="Wee Yee Heng">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <script type="text/javascript" src="js/script.js"></script>
+  <title>Television Energy Consumption</title>
+</head>
+<body>
+  <!-- Header / Navbar -->
+  <header class="navbar">
+    <div class="navbar-inner">
+      <nav class="navlogo">
+        <a href="index.html" onclick="goToPage('index.html'); return false;">
+          <img src="images/power_logo.png" alt="Appliance Energy Consumption Home">
+        </a>
+      </nav>
+      <nav class="navpage">
+        <a href="index.html" onclick="goToPage('index.html'); return false;">Home</a>
+        <a href="televisions.html" onclick="goToPage('televisions.html'); return false;">Televisions</a>
+        <a href="about.html" onclick="goToPage('about.html'); return false;">About Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main television-story">
+    <!-- Story introduction -->
+    <section class="page-hero">
+      <p class="page-eyebrow page-eyebrow-story">Data Story</p>
+      <h1>Choosing a Television in Australia</h1>
+      <p class="intro">
+        Australian consumers have many television options available.
+        This story explores product choice and energy consumption.
+      </p>
+    </section>
+
+    <!-- What is available? -->
+    <section class="story-group" aria-labelledby="available-heading">
+      <div class="story-group-heading">
+        <p class="story-eyebrow story-eyebrow-choice">What is available?</p>
+        <h2 id="available-heading">Understanding the Available Choices</h2>
+      </div>
+
+      <article class="story-card">
+        <div class="story-copy">
+          <h3>What screen technologies are most common?</h3>
+          <p class="story-description">
+            Compare the number of currently available televisions across different screen technologies.
+          </p>
+          <p class="story-takeaway"><strong>Takeaway:</strong> LCD (LED) offers the widest range of available models.</p>
+        </div>
+        <figure class="story-visual">
+          <img src="images/Chart/Q1.png" alt="Bar chart showing available televisions by screen technology">
+        </figure>
+      </article>
+
+      <article class="story-card story-card-reverse">
+        <div class="story-copy">
+          <h3>Which screen sizes are most common?</h3>
+          <p class="story-description">
+            Compare how many currently available televisions are offered at each screen size.
+          </p>
+          <p class="story-takeaway"><strong>Takeaway:</strong> 55-inch and 65-inch televisions provide the most model options.</p>
+        </div>
+        <figure class="story-visual">
+          <img src="images/Chart/Q2.png" alt="Bar chart showing available televisions by screen size">
+        </figure>
+      </article>
+
+      <article class="story-card">
+        <div class="story-copy">
+          <h3>Which brands offer the most models?</h3>
+          <p class="story-description">
+            Compare the number of different television models available from the leading brands in the dataset.
+          </p>
+          <p class="story-takeaway"><strong>Takeaway:</strong> KOGAN offers the largest number of television models among the brands shown.</p>
+        </div>
+        <figure class="story-visual">
+          <img src="images/Chart/Q3.png" alt="Bar chart showing the number of television models by brand">
+        </figure>
+      </article>
+    </section>
+
+    <!-- What affects energy use? -->
+    <section class="story-group" aria-labelledby="energy-heading">
+      <div class="story-group-heading">
+        <p class="story-eyebrow story-eyebrow-energy">What affects energy use?</p>
+        <h2 id="energy-heading">Understanding Television Energy Use</h2>
+      </div>
+
+      <article class="story-card">
+        <div class="story-copy">
+          <h3>Which technology uses the least power?</h3>
+          <p class="story-description">
+            Compare median average-mode power consumption across the available screen technologies.
+          </p>
+          <p class="story-takeaway"><strong>Takeaway:</strong> LCD has the lowest median power consumption in this dataset.</p>
+        </div>
+        <figure class="story-visual">
+          <img src="images/Chart/Q4.png" alt="Bar chart showing median power consumption by screen technology">
+        </figure>
+      </article>
+
+      <article class="story-card story-card-reverse">
+        <div class="story-copy">
+          <h3>Does screen size affect power use?</h3>
+          <p class="story-description">
+            Each point represents one television. The overall pattern can be used to examine how screen size relates to average power consumption.
+          </p>
+          <p class="story-takeaway"><strong>Takeaway:</strong> Choosing a larger screen may also mean higher power use.</p>
+        </div>
+        <figure class="story-visual">
+          <img src="images/Chart/Q5.png" alt="Scatter plot showing the relationship between screen size and power consumption">
+        </figure>
+      </article>
+    </section>
+
+    <!-- What does this mean? -->
+    <section class="story-group" aria-labelledby="meaning-heading">
+      <div class="story-group-heading">
+        <p class="story-eyebrow story-eyebrow-meaning">What does this mean?</p>
+        <h2 id="meaning-heading">Looking Beyond Screen Size</h2>
+      </div>
+
+      <article class="story-card">
+        <div class="story-copy">
+          <h3>Does screen size affect star rating?</h3>
+          <p class="story-description">
+            Each point represents one television. The plot shows whether star rating changes consistently as screen size increases.
+          </p>
+          <p class="story-takeaway"><strong>Takeaway:</strong> A larger television does not necessarily have a higher or lower star rating.</p>
+        </div>
+        <figure class="story-visual">
+          <img src="images/Chart/Q6.png" alt="Scatter plot showing the relationship between screen size and star rating">
+        </figure>
+      </article>
+    </section>
+
+    <!-- Conclusion -->
+    <section class="story-summary" aria-labelledby="takeaways-heading">
+      <p class="story-eyebrow story-eyebrow-summary">Conclusion</p>
+      <h2 id="takeaways-heading">Key Takeaways</h2>
+
+      <div class="takeaway-grid">
+        <article class="takeaway-item">
+          <span class="takeaway-number">01</span>
+          <div>
+            <h3>LCD (LED) dominates available models</h3>
+            <p>Most choice concentrates in a single screen technology.</p>
+          </div>
+        </article>
+
+        <article class="takeaway-item">
+          <span class="takeaway-number">02</span>
+          <div>
+            <h3>Screen size and technology relate to power use</h3>
+            <p>Larger screens and some screen technologies are associated with higher power consumption.</p>
+          </div>
+        </article>
+
+        <article class="takeaway-item">
+          <span class="takeaway-number">03</span>
+          <div>
+            <h3>Screen size alone does not explain star rating</h3>
+            <p>Energy rating is not simply a function of size.</p>
+          </div>
+        </article>
+      </div>
+
+      <p class="bottom-line">
+        <strong>The bottom line:</strong> Consider both product features and energy performance when comparing models.
+      </p>
+    </section>
+
+    <a href="#" class="scroll-btn"><img src="images/scroll.png" alt="Scroll To The Top"></a>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-wrap">
+      <div class="footer-brand">
+        <figure class="footer-logo">
+          <a href="index.html" onclick="goToPage('index.html'); return false;">
+            <img src="images/power_logo.png" alt="Appliance Energy Consumption Home">
+          </a>
+          <figcaption>Appliance Energy Consumption</figcaption>
+        </figure>
+      </div>
+
+      <nav class="footer-menu">
+        <h3>Quick Menu</h3>
+        <ul>
+          <li><a href="index.html" onclick="goToPage('index.html'); return false;">Home</a></li>
+          <li><a href="televisions.html" onclick="goToPage('televisions.html'); return false;">Televisions</a></li>
+          <li><a href="about.html" onclick="goToPage('about.html'); return false;">About Us</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="legal">© 2026 Wee Yee Heng. All rights reserved.</div>
+  </footer>
+</body>
+</html>
