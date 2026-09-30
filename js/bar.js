@@ -1,11 +1,4 @@
-d3.csv(
-    "data/Ex5_TV_energy_55inchtv_byScreenType.csv",
-    d => ({
-      screenTech: d.Screen_Tech,
-      energyConsumption:
-        +d["Mean(Labelled energy consumption (kWh/year))"]
-    })
-  ).then(data => {
+load55InchTVData().then(data => {
   
     console.log("55-inch TV energy data:", data);
   

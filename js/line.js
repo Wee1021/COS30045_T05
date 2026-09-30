@@ -1,7 +1,4 @@
-d3.csv("data/Ex5_ARE_Spot_Prices.csv", d => ({
-    year: +d.Year,
-    averagePrice: +d["Average Price (notTas-Snowy)"]
-  })).then(data => {
+loadSpotPriceData().then(data => {
   
     console.log("Electricity price data:", data);
   

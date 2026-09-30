@@ -1,11 +1,4 @@
-d3.csv(
-    "data/Ex5_TV_energy_Allsizes_byScreenType.csv",
-    d => ({
-      screenTech: d.Screen_Tech,
-      energyConsumption:
-        +d["Mean(Labelled energy consumption (kWh/year))"]
-    })
-  ).then(data => {
+loadAllTVScreenTypeData().then(data => {
   
     console.log("All-size TV energy data:", data);
   
@@ -14,7 +7,7 @@ d3.csv(
   
     const radius = Math.min(width, height) / 2 - 60;
   
-    const svg = d3.select("#pie-chart")
+    const svg = d3.select("#donut-chart")
       .append("svg")
       .attr("viewBox", `0 0 ${width} ${height}`);
   

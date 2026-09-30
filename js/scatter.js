@@ -1,11 +1,4 @@
-d3.csv("data/Ex5_TV_energy.csv", d => ({
-        brand: d.brand,
-        screenTech: d.screen_tech,
-        screenSize: +d.screensize,
-        energyConsumption: +d.energy_consumpt,
-        starRating: +d.star2,
-        count: +d.count
-    })).then(data => {
+loadTVEnergyData().then(data => {
   
     console.log("TV energy data:", data);
   
